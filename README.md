@@ -21,7 +21,7 @@
     ```
 For more information, refer to [Firebase Cloud Messaging docs][1]
 
-3. Add the maven reprository link to your repositories in your build.gradle project: 
+3. Add the maven repository link to your repositories in your build.gradle project: 
 ```groovy
 allprojects {
     repositories {
@@ -40,7 +40,7 @@ dependencies {
 
 ## Usage
 
-1. Add your "google-services.json" provided by Firebase to the root of your applicatin module.
+1. Add your "google-services.json" provided by Firebase to the root of your application module.
 
 2. In the onCreate() of your Application class, before the super : 
     1. Set the base url of the server (optional)
