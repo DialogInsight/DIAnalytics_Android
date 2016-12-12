@@ -34,7 +34,7 @@ For more information, refer to [Firebase Cloud Messaging docs][1]
 4. Add this to dependencies in your build.gradle application module:
     ```groovy
     dependencies {
-    compile 'com.dialoginsight:dianalytics:0.1.0'
+        compile 'com.dialoginsight:dianalytics:0.1.0'
     }
     ```
 
