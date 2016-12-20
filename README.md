@@ -9,12 +9,12 @@
 ## Installation
 
 1. Add Google Services to your project build.gradle dependencies:
-    ```groovy
+     ```groovy
     dependencies {
         ...
         classpath 'com.google.gms:google-services:3.0.0'
     }
-    ```
+     ```
 2. Add to your build.gradle application module this plugin at the end of the file
     ```groovy
     apply plugin: 'com.google.gms.google-services'
