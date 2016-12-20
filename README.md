@@ -62,6 +62,7 @@ For more information, refer to [Firebase Cloud Messaging docs][1]
     ```
 
 You also need to have a receiver to display the received notification
+
     ```java
     public class NotificationReceiver extends DINotificationReceiver {
         @Override
@@ -72,6 +73,7 @@ You also need to have a receiver to display the received notification
     ```
     
 and declare it to your manifest
+
     ```xml
     <receiver android:name=".NotificationReceiver">
         <intent-filter>
