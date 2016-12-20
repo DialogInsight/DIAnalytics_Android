@@ -70,6 +70,7 @@ You also need to have a receiver to display the received notification
         }
     }
     ```
+    
 and declare it to your manifest
     ```xml
     <receiver android:name=".NotificationReceiver">
