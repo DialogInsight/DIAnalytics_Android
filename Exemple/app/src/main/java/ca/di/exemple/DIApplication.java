@@ -22,7 +22,7 @@ public class DIApplication extends Application {
         super.onCreate();
 
         //Set the base url for all calls to the server
-        DIAnalytics.setBaseUrl("https://dev.ofsys.com/");
+        DIAnalytics.setBaseUrl("https://ofsys.com/");
 
         //Enable logs to be displayed
         DIAnalytics.setLogEnabled(true);
