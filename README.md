@@ -73,7 +73,7 @@ For more information, refer to [Firebase Cloud Messaging docs][1]
     ```xml
     <receiver android:name=".NotificationReceiver">
         <intent-filter>
-            <action android:name="com.dialoginsight.analytics.NotificationBroadcast"/>
+            <action android:name="com.dialoginsight.dianalytics.NotificationBroadcast"/>
         </intent-filter>
     </receiver>
     ```
