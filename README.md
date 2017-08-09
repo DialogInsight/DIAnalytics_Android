@@ -49,7 +49,7 @@ For more information, refer to [Firebase Cloud Messaging docs][1]
     3. Start library with your ApplicationId provided by Dialog Insight
     ```java
     //Set the base URL for all calls to the server
-    DIAnalytics.setBaseUrl("https://ofsys.com/");
+    DIAnalytics.setBaseUrl("https://app.dialoginsight.com/");
     
     //Enable logs to be displayed
     DIAnalytics.setLogEnabled(true);
@@ -81,9 +81,9 @@ For more information, refer to [Firebase Cloud Messaging docs][1]
 3. Send information about the user as an HashMap using the function DIAnalytics.identify(hashmap)
     ```java
     HashMap contactData = new HashMap();
-    contactData.put("eMail", "example@example.com");
-    contactData.put("nom", "FirstNane");
-    contactData.put("prenom", "LastName");
+    contactData.put("f_EMail", "example@example.com");
+    contactData.put("f_FirstName", "FirstNane");
+    contactData.put("f_LastName", "LastName");
     
     HashMap hashMap = new HashMap();
     hashMap.put("contact", contactData);
