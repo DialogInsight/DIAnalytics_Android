@@ -94,7 +94,22 @@ For more information, refer to [Firebase Cloud Messaging docs][1]
     ```java
     DIAnalytics.registerForRemoteNotification();
     ```
-
+    
+5. Send confirmation of receipt.
+    ```java
+    DIAnalytics.sendPushReception("messageID");
+    ```
+    
+    You can retrieve the message ID within the data payload by using the key OFSYSReceptionID.
+    ```java
+    @Override
+    public void onMessageReceived(Context context, RemoteMessage remoteMessage) {
+          DIAnalytics.sendPushReception(remoteMessage.getData().get("OFSYSReceptionID"));
+          ...
+    }
+    ```
+    When the app is in the background, the data payload is delivered in the extras of the intent of your launcher Activity. When the app     is in the foreground, the data payload is delivered to the onMessageReceived.
+    
 ## Authors
 Dialog Insight, info@dialoginsight.com
 
