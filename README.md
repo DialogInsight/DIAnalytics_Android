@@ -79,6 +79,31 @@ For more information, refer to [Firebase Cloud Messaging docs][1]
     ```
 
 3. Send information about the user as an HashMap using the function DIAnalytics.identify(hashmap)
+
+     In order to identify a user of the application as a contact of your DI project, you must provide the information corresponding to        the fields of the [unique key][2].
+
+     Note: 
+     the DI fields always start with a "f_". In the DI project fields page, look at the fields tagged has “primary field” and note their      code. In the following steps, just prepend “f_” with any field code. For instance, a DI field with the code “idCustomer” will            become “f_idCustomer”.
+
+     This is made in two simples step. First, gather the primary key fields informations in a HashMap.
+
+     For example, a project where the unique key is composed only of the EMail field, do:
+     ```java
+    HashMap contactData = new HashMap();
+    contactData.put("f_EMail", "example@example.com");
+    ```
+     For a project where the unique key is composed of the fields FirstName et LastName field, do:
+     ```java
+    HashMap contactData = new HashMap();
+    contactData.put("f_EMail", "example@example.com");
+    ```
+     For a project where the unique key is composed only of a field named “idCustomer”, do:
+     ```java
+     HashMap contactData = new HashMap();
+     contactData.put("f_EMail", "example@example.com");
+    ```
+    
+    Then, make another HashMap with a “contact” entry and send it.
     ```java
     HashMap contactData = new HashMap();
     contactData.put("f_EMail", "example@example.com");
@@ -116,3 +141,4 @@ Dialog Insight, info@dialoginsight.com
 ## License
 
 [1]: https://firebase.google.com/docs/cloud-messaging/
+[2]: https://support.dialoginsight.com/en/support/solutions/articles/1000249331-defining-project-fields
