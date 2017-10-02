@@ -83,7 +83,7 @@ For more information, refer to [Firebase Cloud Messaging docs][1]
      In order to identify a user of the application as a contact of your DI project, you must provide the information corresponding to        the fields of the [unique key][2].
 
      Note: 
-     the DI fields always start with a "f_". In the DI project fields page, look at the fields tagged has “primary field” and note their      code. In the following steps, just prepend “f_” with any field code. For instance, a DI field with the code “idCustomer” will            become “f_idCustomer”.
+     the DI fields always start with a "f_". In the DI project fields page, look at the fields tagged as “primary field” and note their      code. In the following steps, just prepend “f_” with any field code. For instance, a DI field with the code “idCustomer” will            become “f_idCustomer”.
 
      This is made in two simples step. First, gather the primary key fields informations in a HashMap.
 
