@@ -95,21 +95,17 @@ For more information, refer to [Firebase Cloud Messaging docs][1]
      For a project where the unique key is composed of the fields FirstName and LastName, do:
      ```java
     HashMap contactData = new HashMap();
-    contactData.put("f_EMail", "example@example.com");
+    contactData.put("f_FirstName", "John");
+    contactData.put("f_LastName", "Smith");
     ```
      For a project where the unique key is composed only of a field named “idCustomer”, do:
      ```java
      HashMap contactData = new HashMap();
-     contactData.put("f_EMail", "example@example.com");
+     contactData.put("f_idCustomer", 1234);
     ```
     
     Then, make another HashMap with a “contact” entry and send it.
     ```java
-    HashMap contactData = new HashMap();
-    contactData.put("f_EMail", "example@example.com");
-    contactData.put("f_FirstName", "FirstNane");
-    contactData.put("f_LastName", "LastName");
-    
     HashMap hashMap = new HashMap();
     hashMap.put("contact", contactData);
     DIAnalytics.identify(hashMap);
