@@ -92,7 +92,7 @@ For more information, refer to [Firebase Cloud Messaging docs][1]
     HashMap contactData = new HashMap();
     contactData.put("f_EMail", "example@example.com");
     ```
-     For a project where the unique key is composed of the fields FirstName et LastName field, do:
+     For a project where the unique key is composed of the fields FirstName and LastName, do:
      ```java
     HashMap contactData = new HashMap();
     contactData.put("f_EMail", "example@example.com");
