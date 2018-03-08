@@ -6,6 +6,10 @@
 - Firebase project and his "google-services.json". For more information, refer to [Firebase Cloud Messaging docs][1]
 - Application ID provided by Dialog Insight
 
+## Exemple
+
+The example project won't compile until you add your own “google-services.json” at the root of your application module. The “google-services.json” file can be found in your Firebase console.
+
 ## Installation
 
 1. Add Google Services to your project build.gradle dependencies:
