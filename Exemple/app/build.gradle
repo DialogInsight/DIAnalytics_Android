@@ -33,3 +33,5 @@ dependencies {
 
     compile 'com.dialoginsight:dianalytics:0.1.0'
 }
+
+apply plugin: 'com.google.gms.google-services'
