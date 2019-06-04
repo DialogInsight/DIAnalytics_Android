@@ -16,7 +16,7 @@ The example project won't compile until you add your own “google-services.json
      ```groovy
     dependencies {
         ...
-        classpath 'com.google.gms:google-services:3.0.0'
+        classpath 'com.google.gms:google-services:4.2.0'
     }
     ```
      
@@ -39,7 +39,7 @@ For more information, refer to [Firebase Cloud Messaging docs][1]
 4. Add this to dependencies in your build.gradle application module:
     ```groovy
     dependencies {
-        compile 'com.dialoginsight:dianalytics:0.1.0'
+        compile 'com.dialoginsight:dianalytics:0.2.0'
     }
     ```
 
@@ -73,13 +73,20 @@ For more information, refer to [Firebase Cloud Messaging docs][1]
         }
     }
     ```
-    and declare it to your manifest
+    and declare it to your manifest (works only for targetSdkVersion < 26)
     ```xml
     <receiver android:name=".NotificationReceiver">
         <intent-filter>
             <action android:name="com.dialoginsight.dianalytics.NotificationBroadcast"/>
         </intent-filter>
     </receiver>
+    ```
+    or declare it in your activity (recommended)
+    ```java
+    NotificationReceiver n = new NotificationReceiver();
+    IntentFilter filter = new IntentFilter();
+    filter.addAction("com.dialoginsight.dianalytics.NotificationBroadcast");
+    this.registerReceiver(n, filter);
     ```
 
 3. Send information about the user as an HashMap using the function DIAnalytics.identify(hashmap)
@@ -125,11 +132,11 @@ For more information, refer to [Firebase Cloud Messaging docs][1]
     DIAnalytics.sendPushReception("messageID");
     ```
     
-    You can retrieve the message ID within the data payload by using the key OFSYSReceptionID.
+    You can retrieve the message ID within the data payload by using the key PushId.
     ```java
     @Override
     public void onMessageReceived(Context context, RemoteMessage remoteMessage) {
-          DIAnalytics.sendPushReception(remoteMessage.getData().get("OFSYSReceptionID"));
+          DIAnalytics.sendPushReception(remoteMessage.getData().get("PushId"));
           ...
     }
     ```
