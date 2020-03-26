@@ -136,7 +136,7 @@ For more information, refer to [Firebase Cloud Messaging docs][1]
     ```java
     @Override
     public void onMessageReceived(Context context, RemoteMessage remoteMessage) {
-          DIAnalytics.sendPushReception(remoteMessage.getData().get("PushId"));
+          DIAnalytics.sendPushReception(remoteMessage.getData().get("OFSYSReceptionID"));
           ...
     }
     ```
