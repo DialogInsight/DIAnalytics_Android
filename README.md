@@ -53,6 +53,9 @@ For more information, refer to [Firebase Cloud Messaging docs][1]
     3. Start library with your ApplicationId provided by Dialog Insight
     ```java
     //Set the base URL for all calls to the server
+    //For France
+    DIAnalytics.setBaseUrl("https://app.mydialoginsight.com/");
+    //For other countries
     DIAnalytics.setBaseUrl("https://app.dialoginsight.com/");
     
     //Enable logs to be displayed
