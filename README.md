@@ -132,7 +132,7 @@ For more information, refer to [Firebase Cloud Messaging docs][1]
     
 5. Send confirmation of receipt.
     ```java
-    DIAnalytics.sendPushReception("messageID");
+    DIAnalytics.sendPushReception([message ID (string)]);
     ```
     
     You can retrieve the message ID within the data payload by using the key OFSYSReceptionID.
